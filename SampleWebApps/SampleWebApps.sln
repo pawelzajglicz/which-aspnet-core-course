@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPages", "RazorPages\RazorPages.csproj", "{AB1BA679-FD88-4465-BCC5-F57101AFC3EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPages", "RazorPages\RazorPages.csproj", "{AB1BA679-FD88-4465-BCC5-F57101AFC3EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC\MVC.csproj", "{3996B36D-00F9-4A95-9F25-DA1270C6AC93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC", "MVC\MVC.csproj", "{3996B36D-00F9-4A95-9F25-DA1270C6AC93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{4D1B02A8-B14A-440B-9898-B9B322829583}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3996B36D-00F9-4A95-9F25-DA1270C6AC93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3996B36D-00F9-4A95-9F25-DA1270C6AC93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3996B36D-00F9-4A95-9F25-DA1270C6AC93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D1B02A8-B14A-440B-9898-B9B322829583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1B02A8-B14A-440B-9898-B9B322829583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1B02A8-B14A-440B-9898-B9B322829583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1B02A8-B14A-440B-9898-B9B322829583}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
