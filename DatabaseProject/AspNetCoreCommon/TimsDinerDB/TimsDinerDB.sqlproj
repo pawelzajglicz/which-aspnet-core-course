@@ -56,5 +56,23 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Scripts" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Stored Procedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Food.sql" />
+    <Build Include="dbo\Stored Procedures\spFood_All.sql" />
+    <Build Include="dbo\Stored Procedures\spOrders_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\spOrders_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\spOrders_UpdateName.sql" />
+    <Build Include="dbo\Stored Procedures\spOrders_Delete.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Order.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
