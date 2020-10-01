@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TimsDinerDB", "TimsDinerDB\TimsDinerDB.sqlproj", "{4AA42108-7154-4824-9EB7-C11EDAFCF39B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLibrary", "DataLibrary\DataLibrary.csproj", "{4FA4A7A4-BA68-469E-BDD8-69571D550F66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{4AA42108-7154-4824-9EB7-C11EDAFCF39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AA42108-7154-4824-9EB7-C11EDAFCF39B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4AA42108-7154-4824-9EB7-C11EDAFCF39B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4FA4A7A4-BA68-469E-BDD8-69571D550F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA4A7A4-BA68-469E-BDD8-69571D550F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA4A7A4-BA68-469E-BDD8-69571D550F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA4A7A4-BA68-469E-BDD8-69571D550F66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
