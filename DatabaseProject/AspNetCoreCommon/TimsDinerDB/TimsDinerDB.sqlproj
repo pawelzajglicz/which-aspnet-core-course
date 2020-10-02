@@ -75,4 +75,7 @@
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="TimsDinerDB.publish.xml" />
+  </ItemGroup>
 </Project>
