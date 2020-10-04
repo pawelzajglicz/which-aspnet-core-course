@@ -23,18 +23,18 @@ namespace DataLibrary.Data
 
         public async Task<int> CreateOrder(OrderModel order)
         {
-            DynamicParameters paramters = new DynamicParameters();
+            DynamicParameters parameters = new DynamicParameters();
 
-            paramters.Add("OrderName", order.OrderName);
-            paramters.Add("OrderDate", order.OrderDate);
-            paramters.Add("FoodId", order.FoodId);
-            paramters.Add("Quantity", order.Quantity);
-            paramters.Add("Total", order.Total);
-            paramters.Add("Id", DbType.Int32, direction: ParameterDirection.Output);
+            parameters.Add("OrderName", order.OrderName);
+            parameters.Add("OrderDate", order.OrderDate);
+            parameters.Add("FoodId", order.FoodId);
+            parameters.Add("Quantity", order.Quantity);
+            parameters.Add("Total", order.Total);
+            parameters.Add("Id", DbType.Int32, direction: ParameterDirection.Output);
 
-            await _dataAccess.SavaData("dbo.spOrders_Insert", p, _connectionString.SqlConnectionName);
+            await _dataAccess.SavaData("dbo.spOrders_Insert", parameters, _connectionString.SqlConnectionName);
 
-            return paramters.Get<int>("Id");
+            return parameters.Get<int>("Id");
         }
 
         public Task<int> UpdateOrderName(int orderId, string orderName)
