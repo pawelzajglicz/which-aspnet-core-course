@@ -36,4 +36,19 @@ else
             </tr>
         </tbody>
     </table>
+
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input asp-for="UpdateModel.Id" value="@Model.Order.Id" type="hidden" />
+        
+        <div class="="form-group>
+            <label asp-for="UpdateModel.OrderName" class="control-label"></label>
+            <input asp-for="UpdateModel.OrderName" value="@Model.Order.OrderName" class="form-control" />
+            <span asp-validation-for="UpdateModel.OrderName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Update Order Name" class="btn btn-primary" />
+        </div>
+    </form>
 }
