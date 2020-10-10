@@ -31,7 +31,7 @@ namespace DataLibrary.Db
             }
         }
 
-        public async Task<int> SavaData<T>(string storedProcedure, T parameters, string connectionStringName)
+        public async Task<int> SaveData<T>(string storedProcedure, T parameters, string connectionStringName)
         {
             string connectionString = _config.GetConnectionString(connectionStringName);
 

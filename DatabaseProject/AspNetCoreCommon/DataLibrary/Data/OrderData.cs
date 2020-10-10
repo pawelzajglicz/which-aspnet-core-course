@@ -32,14 +32,14 @@ namespace DataLibrary.Data
             parameters.Add("Total", order.Total);
             parameters.Add("Id", DbType.Int32, direction: ParameterDirection.Output);
 
-            await _dataAccess.SavaData("dbo.spOrders_Insert", parameters, _connectionString.SqlConnectionName);
+            await _dataAccess.SaveData("dbo.spOrders_Insert", parameters, _connectionString.SqlConnectionName);
 
             return parameters.Get<int>("Id");
         }
 
         public Task<int> UpdateOrderName(int orderId, string orderName)
         {
-            return _dataAccess.SavaData("dbo.spOrders_UpdateName",
+            return _dataAccess.SaveData("dbo.spOrders_UpdateName",
                                         new
                                         {
                                             Id = orderId,
@@ -50,7 +50,7 @@ namespace DataLibrary.Data
 
         public Task<int> DeleteOrder(int orderId)
         {
-            return _dataAccess.SavaData("dbo.spOrders_Delete",
+            return _dataAccess.SaveData("dbo.spOrders_Delete",
                                         new
                                         {
                                             Id = orderId
