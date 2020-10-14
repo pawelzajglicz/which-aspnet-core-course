@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.Xml;
 using System.Threading.Tasks;
 using DataLibrary.Data;
 using DataLibrary.Models;
@@ -70,6 +71,14 @@ namespace MVCDemoApp.Controllers
             }
 
             return View(displayOrder);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(int id, string orderName)
+        {
+            await orderData.UpdateOrderName(id, orderName);
+
+            return RedirectToAction("Display", new { id });
         }
     }
 }

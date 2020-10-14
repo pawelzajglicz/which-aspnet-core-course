@@ -37,4 +37,15 @@ else
             </tr>
         </tbody>
     </table>
+
+    <form asp-action="Update">
+        <input name="id" value="@Model.Order.Id" type="hidden" />
+        <div class="form-group">
+            <label class="control-label">Order Name</label>
+            <input name="orderName" value="@Model.Order.OrderName" class="form-control" />
+        </div>
+        <div class="form-gropup">
+            <input type="submit" value="Update Order Name" class="btn btn-primary" />
+        </div>
+    </form>
 }
