@@ -7,6 +7,7 @@ using DataLibrary.Data;
 using DataLibrary.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.CSharp;
 using MVCDemoApp.Models;
 
 namespace MVCDemoApp.Controllers
@@ -79,6 +80,21 @@ namespace MVCDemoApp.Controllers
             await orderData.UpdateOrderName(id, orderName);
 
             return RedirectToAction("Display", new { id });
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var order = await orderData.GetOrderById(id);
+
+            return View(order);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(OrderModel order)
+        {
+            await orderData.DeleteOrder(order.Id);
+
+            return RedirectToAction("Create");
         }
     }
 }
