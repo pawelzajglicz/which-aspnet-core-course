@@ -36,5 +36,36 @@ namespace ApiDemoApp.Controllers
 
             return Ok(new { Id = id });
         }
+
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> Get(int id)
+        {
+            if (id == 0)
+            {
+                return BadRequest();
+            }
+
+            var order = await orderData.GetOrderById(id);
+
+            if (order != null)
+            {
+                var food = await foodData.GetFood();
+
+                var output = new
+                {
+                    Order = order,
+                    ItemPurchased = food.Where(x => x.Id == order.FoodId).FirstOrDefault()?.Title
+                };
+
+                return Ok(output);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
     }
 }
