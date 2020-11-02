@@ -78,5 +78,15 @@ namespace ApiDemoApp.Controllers
 
             return Ok();
         }
+
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await orderData.DeleteOrder(id);
+
+            return Ok();
+        }
     }
 }
